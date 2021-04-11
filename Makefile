@@ -19,6 +19,7 @@ dev: stop
 run: stop
 	docker run -d \
 	  --privileged \
+	  --restart unless-stopped \
 	  --name ${NAME} \
 	  $(DOCKERHUB_ID)/$(NAME):$(VERSION)
 
